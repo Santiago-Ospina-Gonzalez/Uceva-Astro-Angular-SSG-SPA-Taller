@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { UsersPage } from './pages/users/users.page';
+import { DatePage } from './pages/date/date.page';
 import { ProductsPage } from './pages/products/products.page';
+import { UsersPage } from './pages/users/users.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -36,6 +37,15 @@ export const routes: Routes = [
    * de mostrar y gestionar el listado de productos.
    */
   { path: 'products', component: ProductsPage },
+
+  /**
+   * Ruta de la fecha.
+   *
+   * @remarks
+   * Renderiza el componente `DatePage`, encargado
+   * de mostrar la fecha actual del sistema.
+   */
+  { path: 'date', component: DatePage },
 
   /**
    * Ruta comodín.
