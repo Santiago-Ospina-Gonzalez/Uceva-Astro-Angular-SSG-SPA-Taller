@@ -1,0 +1,37 @@
+<main class="blog-home">
+  <section class="blog-hero">
+    <p class="eyebrow">Bitacora frontend</p>
+    <h1>Ideas para construir mejor la web.</h1>
+    <p class="intro">Un espacio para explorar arquitectura, rendimiento y componentes desde la practica.</p>
+    <a class="primary-link" href="/blog/articles">Explorar articulos</a>
+  </section>
+
+  <section class="featured-post" aria-labelledby="featured-title">
+    <div>
+      <p class="eyebrow">Articulo destacado</p>
+      <h2 id="featured-title">{{ featuredPost.title }}</h2>
+      <p>{{ featuredPost.excerpt }}</p>
+    </div>
+    <div class="post-meta">
+      <span>{{ featuredPost.category }}</span>
+      <span>{{ featuredPost.readTime }}</span>
+    </div>
+  </section>
+
+  <section class="recent-posts" aria-labelledby="recent-title">
+    <div class="section-heading">
+      <p class="eyebrow">Para leer despues</p>
+      <h2 id="recent-title">Nuevas conversaciones</h2>
+    </div>
+    <div class="post-grid">
+      @for (post of recentPosts; track post.slug) {
+        <article class="post-card">
+          <p class="post-category">{{ post.category }}</p>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt }}</p>
+          <small>{{ post.publishedAt }} · {{ post.readTime }}</small>
+        </article>
+      }
+    </div>
+  </section>
+</main>
