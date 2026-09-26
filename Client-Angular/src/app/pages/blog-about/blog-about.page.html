@@ -1,0 +1,22 @@
+<main class="about-page">
+  <section class="about-intro">
+    <p class="eyebrow">Sobre este espacio</p>
+    <h1>Una bitacora para entender lo que construimos.</h1>
+    <p>
+      Este blog convierte preguntas de frontend en conversaciones cortas sobre arquitectura,
+      rendimiento y calidad de codigo.
+    </p>
+  </section>
+
+  <section class="principles" aria-labelledby="principles-title">
+    <div>
+      <p class="eyebrow">Forma de trabajo</p>
+      <h2 id="principles-title">Tres ideas que guian cada nota</h2>
+    </div>
+    <ol>
+      @for (principle of principles; track principle; let index = $index) {
+        <li><span>0{{ index + 1 }}</span>{{ principle }}</li>
+      }
+    </ol>
+  </section>
+</main>

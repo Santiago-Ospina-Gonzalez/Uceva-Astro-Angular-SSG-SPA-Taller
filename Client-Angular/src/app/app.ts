@@ -59,6 +59,7 @@ export class App {
     navLinks: [
       { text: 'Blog', url: '/blog' },
       { text: 'Articulos', url: '/blog/articles' },
+      { text: 'Sobre el blog', url: '/blog/about' },
       { text: 'Usuarios', url: '/users' },
       { text: 'Productos', url: '/products' },
       { text: 'Fecha', url: '/date' },
