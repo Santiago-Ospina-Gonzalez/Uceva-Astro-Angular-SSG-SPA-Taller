@@ -1,0 +1,21 @@
+<main class="articles-page">
+  <header class="page-heading">
+    <p class="eyebrow">Archivo</p>
+    <h1>Todos los articulos</h1>
+    <p>Notas breves para tomar mejores decisiones al crear productos digitales.</p>
+  </header>
+
+  <div class="articles-list">
+    @for (post of posts; track post.slug; let index = $index) {
+      <article class="article-row">
+        <span class="article-number">0{{ index + 1 }}</span>
+        <div>
+          <p class="post-category">{{ post.category }} · {{ post.readTime }}</p>
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.excerpt }}</p>
+        </div>
+        <time>{{ post.publishedAt }}</time>
+      </article>
+    }
+  </div>
+</main>
