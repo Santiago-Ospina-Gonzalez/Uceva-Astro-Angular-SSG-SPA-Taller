@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { DatePage } from './pages/date/date.page';
+import { BlogHomePage } from './pages/blog-home/blog-home.page';
 import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
 
@@ -19,6 +20,7 @@ import { UsersPage } from './pages/users/users.page';
  * @see {@link ProductsPage}
  */
 export const routes: Routes = [
+  { path: 'blog', component: BlogHomePage },
 
   /**
    * Ruta de usuarios.
