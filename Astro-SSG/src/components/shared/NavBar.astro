@@ -5,12 +5,14 @@ import NavLink  from "@components/shared/NavLink.astro";
 
 
 const navbarConfig: NavbarConfig = {
-    title: 'Astro App',
+    title: 'Bitacora frontend',
     iconConfig: {
       icon: 'bootstrap',
       size: 2
     },
     navLinks: [
+            { text: 'Blog', url: '/blog' },
+            { text: 'Articulos', url: '/blog/articles' },
       { text: 'Usuarios', url: '/users' },
       { text: 'Productos', url: '/products' },
       { text: 'Fecha', url: '/current-date' },
