@@ -27,12 +27,15 @@ describe('App', () => {
 
   it('debería definir la configuración del navbar correctamente', () => {
     expect(component.navbarConfig).toEqual({
-      title: 'Angular Client',
+      title: 'Bitacora frontend',
       iconConfig: {
         icon: 'bootstrap',
         size: 2
       },
       navLinks: [
+        { text: 'Blog', url: '/blog' },
+        { text: 'Articulos', url: '/blog/articles' },
+        { text: 'Sobre el blog', url: '/blog/about' },
         { text: 'Usuarios', url: '/users' },
         { text: 'Productos', url: '/products' },
         { text: 'Fecha', url: '/date' },
