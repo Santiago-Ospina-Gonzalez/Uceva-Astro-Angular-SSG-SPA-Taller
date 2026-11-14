@@ -20,32 +20,26 @@ jobs:
     steps:
       - name: Descargar código
         uses: actions/checkout@v4
-
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
           cache-dependency-path: Astro-SSG/package-lock.json
-
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
-
       - name: Instalar dependencias
         working-directory: Astro-SSG
         run: npm ci
-
       - name: Generar sitio estático
         working-directory: Astro-SSG
         env:
           BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build
-
       - name: Configurar fallback para rutas
         run: cp ./Astro-SSG/dist/index.html ./Astro-SSG/dist/404.html
-
       - name: Subir artefacto
         uses: actions/upload-pages-artifact@v3
         with:
