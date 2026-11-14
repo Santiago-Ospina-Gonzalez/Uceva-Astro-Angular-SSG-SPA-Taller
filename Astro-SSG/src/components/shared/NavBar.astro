@@ -3,6 +3,7 @@ import type { NavbarConfig } from "@interfaces/NavBar";
 import Icon  from "@components/shared/Icon.astro";
 import NavLink  from "@components/shared/NavLink.astro";
 
+const baseUrl = import.meta.env.BASE_URL;
 
 const navbarConfig: NavbarConfig = {
     title: 'Bitacora frontend',
@@ -11,12 +12,12 @@ const navbarConfig: NavbarConfig = {
       size: 2
     },
     navLinks: [
-            { text: 'Blog', url: '/blog' },
-            { text: 'Articulos', url: '/blog/articles' },
-            { text: 'Sobre el blog', url: '/blog/about' },
-      { text: 'Usuarios', url: '/users' },
-      { text: 'Productos', url: '/products' },
-      { text: 'Fecha', url: '/current-date' },
+            { text: 'Blog', url: `${baseUrl}blog` },
+            { text: 'Articulos', url: `${baseUrl}blog/articles` },
+            { text: 'Sobre el blog', url: `${baseUrl}blog/about` },
+      { text: 'Usuarios', url: `${baseUrl}users` },
+      { text: 'Productos', url: `${baseUrl}products` },
+      { text: 'Fecha', url: `${baseUrl}current-date` },
     ]
 };
 
